@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Author" content="Fawzi Boudjema">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.77">
+  <style type="text/css">
+    body {background-color: #939393}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Times New Roman'; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Arial; color: #f0000d; -webkit-text-stroke: #f0000d}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Arial; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #f0000d; -webkit-text-stroke: #f0000d}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Arial; -webkit-text-stroke: #000000; min-height: 15.0px}
+    p.p7 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Arial; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 18.0px Arial; text-decoration: underline ; font-kerning: none; color: #0000dc}
+    span.s3 {font: 16.0px 'Times New Roman'; font-kerning: none}
+    span.s4 {font: 16.0px Arial; font-kerning: none; color: #f0000d; -webkit-text-stroke: 0px #f0000d}
+    span.s5 {font: 13.3px Arial; text-decoration: underline ; font-kerning: none; color: #0000dc; -webkit-text-stroke: 0px #0000dc}
+    span.s6 {font: 16.0px Arial; font-kerning: none}
+    span.s7 {-webkit-text-stroke: 0px #000000}
+    span.s8 {font: 13.3px Arial; text-decoration: underline ; font-kerning: none; color: #0000dc}
+    span.s9 {font: 12.0px Times; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s10 {font: 12.0px Arial; font-kerning: none}
+    span.s11 {font: 13.3px Arial; font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s12 {font: 16.0px Times; font-kerning: none}
+    table.t1 {width: 769.0px; background-color: #000000}
+    td.td1 {width: 769.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"> </span></p>
+<table width="769.0" cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p2"><span class="s1"><b>Installation  of  Micromegas_7.X (Freeze-out, Freeze-in for N-component dark matter, Modified cosmology)</b></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3"><span class="s1"><b><br>
+The compressed File micromegas_7.X.tgz is about 23Mb.  To download go to the zenodo page </b><a href="https://zenodo.org/records/20267206"><span class="s2"><b>DOWNLOAD </b></span></a></span><span class="s3"><br>
+</span><span class="s1"><b><br>
+micromegas_7.X was tested for  Linux and Darwin.<br>
+<br>
+First unpack the file, for example tar -zxvf micromegas_7.X.tgz<br>
+<br>
+This will create a directory called micromegas_7.X<br>
+<br>
+I.</b></span><span class="s4"><b><i> General Installation</i></b></span><span class="s1"><b><br>
+In this directory you should first launch,</b></span></p>
+<p class="p3"><span class="s1"><b>gmake  (If you do not have 'gmake'  use 'make' instead)<br>
+<br>
+The command gmake should generate files with compilers flags and  compile  <br>
+       CalcHEP_src/bin/s_calchep <br>
+       sources/micromegas.a<br>
+<br>
+Possible problems are discussed in </b><a href="file:///Volumes/micromegas/v6.0/install_3.0.html#compilers_flags"><span class="s5"><b>Section VI below</b></span></a><b>. <br>
+  <br>
+<br>
+<br>
+II.</b></span><span class="s4"><b><i> The MSSM</i></b></span><span class="s6"><b><i> </i></b></span><span class="s1"><b>(for a general description of all the features go </b><a href="file:///Volumes/micromegas/v13/intro_1.3.html"><span class="s5"><b>here</b></span></a><b>)<br>
+To work with the MSSM go to the  MSSM  directory. <br>
+<br>
+To generate the executable use<br>
+     <br>
+gmake main=&lt;source file&gt;<br>
+                                                          <br>
+where &lt;source file&gt; is either a  C or Fortran file, for example main.c or main.F</b></span></p>
+<p class="p3"><span class="s1"><b> </b></span></p>
+<p class="p3"><span class="s1"><b>To launch the excutable main.c</b></span></p>
+<p class="p3"><span class="s1"><b> </b></span></p>
+<p class="p3"><span class="s1"><b>./main input</b></span></p>
+<p class="p3"><span class="s1"><b> </b></span></p>
+<p class="p3"><span class="s1"><b>Where input is either a set of input parameters r the name of a data file (for example mssm1.par) according to the option chosen in main.c. In both cases instructions are given on the screen.</b></span></p>
+<p class="p3"><span class="s1"><b> </b></span></p>
+<p class="p3"><span class="s1"><b>The list of functions you can use in  your programs is described in  </b><a href="http://www.slac.stanford.edu/spires/find/hep/www?eprint=arXiv:1004.1092"><span class="s5"><b>arXiv:1305.0237 [hep-ph</b></span></a><b>]</b></span><span class="s3"><b><br>
+</b><a href="http://www.slac.stanford.edu/spires/find/hep/www?eprint=arXiv:1004.1092"><span class="s5"><b>arXiv:1004.1092 [hep-ph</b></span></a></span><span class="s1"><b>],</b></span><span class="s3"> </span><span class="s1"><b> </b><a href="http://www.slac.stanford.edu/spires/find/hep/www?eprint=arXiv:0803.2360"><span class="s5"><b>arXiv:0803.2360 [hep-ph</b></span></a><b>],</b></span><span class="s3"> </span><span class="s1"><b>  </b><a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0607059"><span class="s5"><b>hep-ph/0607059</b></span></a><b> and  </b><a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0405253"><span class="s5"><b>hep-ph/0405253</b></span></a><b><br>
+<br>
+  <br>
+III. </b></span><span class="s4"><b><i>Models </i></b></span><span class="s1"><b><br>
+In addition to the MSSM, two models with two-component dark matter, one model with three-component dark matter, and nine models with only one dark matter candidate are provided by the micrOMEGAs team for a seamless integration within  micrOMEGAs 6.0: <br>
+  </b></span></p>
+<ul class="ul1">
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>The NMSSM (see </b><a href="https://arxiv.org/abs/hep-ph/0505"><span class="s5"><b>here</b></span></a><b> for a description of the model).</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with an inert doublet and a Z2 symmetry</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with an inert doublet and a Z3 symmetry (see </b><a href="http://arxiv.org/abs/arXiv:1403.4960"><span class="s5"><b>here</b></span></a><b> for a description of the model)</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with two doublets and a singlet and a Z4 symmetry (see </b><a href="http://arxiv.org/abs/arXiv:1403.4960"><span class="s5"><b>here</b></span></a><b> for a description of the model)</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with two singlets and a Z5 symmetry (see </b><a href="http://arxiv.org/abs/arXiv:2006.14922"><span class="s5"><b>here</b></span></a><b> for a description of the model)</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with three singlets and a Z7 symmetry (see </b><a href="http://arxiv.org/abs/arXiv:2212.07478"><span class="s5"><b>here</b></span></a><b> for a description of the model)</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>The Little Higgs model (see </b><a href="https://arxiv.org/abs/hep-ph/0609179"><span class="s5"><b>here</b></span></a><b> for a description of the model)</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A Z' model with fermion DM (ZpPortal) (see</b><a href="http://arxiv.org/pdf/1202.2962.pdf"><span class="s5"><b> here</b></span></a><b> for a description of the model).</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>The singlet scalar model (SingletDM) (see</b><a href="http://arxiv.org/pdf/1202.2962.pdf"><span class="s5"><b> here</b></span></a><b> for a description of the model).</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with a singlet vector lepton and singlet scalar DM (LLL_scalar) (see</b><a href="http://arxiv.org/pdf/1202.2962.pdf"><span class="s5"><b> here</b></span></a><b> for a description of the model).</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with a scalar leptoquark and two singlet fermions (RDM) (see</b><a href="https://arxiv.org/pdf/2111.08027.pdf"><span class="s5"><b> here</b></span></a><b> for a description of the model).</b></span></li>
+  <li class="li3"><span class="s7"><b></b></span><span class="s1"><b>A model with a fermionic triplet and fermionic singlet (STFM) (see</b><a href="https://arxiv.org/pdf/2207.10536.pdf"><span class="s5"><b> here</b></span></a><b> for a description of the model).</b></span></li>
+</ul>
+<p class="p3"><span class="s1"><b>To generate the executable and launch the program, move to the appropriate directory and</b></span></p>
+<p class="p3"><span class="s1"><b> </b></span></p>
+<p class="p3"><span class="s1"><b>gmake main=main.c</b></span></p>
+<p class="p3"><span class="s1"><b>./main data1.par  (or any other input data file)<br>
+<br>
+<br>
+Other models are also available and can be downloaded</b></span></p>
+<p class="p3"><span class="s1"><b>The  </b><a href="file:///Volumes/micromegas/downloadarea/models/RHNM.tgz"><span class="s8"><b>RHNM </b></span></a></span><span class="s3"><b>(see </b><a href="http://www.slac.stanford.edu/spires/find/hep/www?eprint=arXiv:0706.0526"><span class="s5"><b>here</b></span></a></span><span class="s1"><b> for a description of the model).</b></span></p>
+<p class="p3"><span class="s1"><b>The UMSSM (see </b><a href="http://arxiv.org/abs/1110.2414"><span class="s5"><b>here</b></span></a><b> for a description of the model).</b></span></p>
+<p class="p3"><span class="s1"><b>The CPVMSSM (see </b><a href="https://arxiv.org/abs/hep-ph/0604150"><span class="s5"><b>here</b></span></a><b> for a description of the model).</b></span></p>
+<p class="p4"><span class="s1"><b>  <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p2"><span class="s9"><b>IV.</b></span><span class="s1"><i>Other models</i></span><span class="s10"><b><i><span class="Apple-converted-space"> </span></i></b></span></p>
+<p class="p3"><span class="s1"><b>To implement a new model,  launch<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>    ./newProject  &lt;project name&gt;</b></span></p>
+<p class="p3"><span class="s1"><b>     <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b> Then the directory &lt;project name&gt; will be created with all the needed subdirectories and  sample  files. Further instructions can be found in the local  README file.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>     <span class="Apple-converted-space"> </span></b></span></p>
+<p class="p5"><span class="s11"><b>V. </b></span><span class="s1"><b><i>To clean all generated files</i></b></span><span class="s11"><b> use<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>      ./clean<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>   launched from micromegas_5.0 directory. In each model directory you<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>   can call<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>     gmake clean<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>   to remove all generated files in this particular directory.</b></span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s11"><b>VI. </b></span><span class="s1"><b><i>Compilers and  their Flags</i></b></span></p>
+<p class="p7"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1"><b>The   CalcHEP_src/FlagsForMake and CalcHEP_src/FlagsForSh contain options for compilation and should contain identical settings  in different formats. These files initiated by the getFlags command launched from  the  CalcHEP_src  directory. <br>
+If FlagsForSh does not exist, getFlags creates it according to the operation system name returned by the 'uname' Unix command.<br>
+If FlagsForSh exists, getFlags reads all parameters  from this  file, checks and  modifies them if it needs, and writes down new FlagsForSh and FlagsForMake. It also informs you in case of problem.<br>
+   <br>
+In case of problem the user can change compiler flags  written in  FlagsForSh and launch getFlags  again until  FlagsForMake is generated without any error code. The meaning of all flags is explained in the FlagsForSh file. For example you might have to change the name of the Fortran compiler (set by default to g77).<br>
+<br>
+</b></span><span class="s3"><br>
+</span><span class="s12">&lt;img border=0 width=1 height=1 id="_x0000_i1026" src=ax.pl&gt;&lt;b&gt;&lt;span lang=EN-GB style='font-size:10.0pt;font-family:Arial;mso-ansi-language:EN-GB'&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</span></p>
+</body>
+</html>

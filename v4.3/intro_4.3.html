@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+  
+  
+  
+  
+  <meta name="Author" content="Fawzi Boudjema">
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <title>MicrOMEGAs:Introduction</title>
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(192, 192, 192);" nosave="" alink="#ff0000" link="#0000ee" vlink="#551a8b">
+
+
+
+
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" cols="1" width="100%">
+
+
+
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+
+
+
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">Micromegas
+v_4  for the calculation of </font></font></font></b><big><b><font face="Arial,Helvetica">e<br>
+
+
+
+      <span style="color: rgb(255, 255, 120);"></span></font></b></big><b style="color: rgb(255, 255, 120);"><font face="Arial,Helvetica"><big>Relic density</big></font></b><br>
+
+
+
+      <b><font face="Arial,Helvetica"><font color="#ff0000"><big style="color: rgb(255, 255, 120);">Direct detection rates</big><font size="+1"><span style="color: rgb(255, 255, 120);"></span></font></font></font></b><br>
+
+
+
+      <b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1"><span style="color: rgb(255, 255, 120);">Indirect detection rates</span><span style="color: rgb(255, 255, 120);"></span></font></font></font></b><br>
+
+
+
+    </tr>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Code to calculate the properties of one or two stable massive particles&nbsp; in
+a generic model.&nbsp; First developed to compute the relic density of
+a stable massive particle, the code
+also computes the rates for direct and&nbsp; indirect detection rates
+of dark matter. It is assumed that a discrete symmetry like R-parity
+ensures the&nbsp;stability of the lightest odd particle. All
+annihilation and coannihilation channels are included in the
+computation of the relic density. Specific examples of this general
+approach include the MSSM and various extensions. Extensions to other
+models can be implemented by the user. The New Physics model first
+requires to write a new&nbsp;</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> <a href="http://www.ifh.de/~pukhov/calchep.html">CalcHEP</a></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> model file,&nbsp; a package for the automatic generation of squared matrix elements. &nbsp;This can be done through <a href="http://theory.sinp.msu.ru/~semenov/lanhep.html">LanHEP</a>. Once this is done, all annihilation and coannihilation channels are included automatically in any model.<br>
+
+The cross-sections for both spin dependent and spin independent
+interactions of WIMPS on protons are computed automatically as well as
+the rates for WIMP scattering on nuclei in a large detector.<br>
+
+The neutrino flux and the induced muon flux from DM captured in the Sun and the Earth are computed as well as the exclusion from IceCube22.<br>
+
+Annihilation cross-sections of the dark matter candidate at zero
+velocity, relevant for indirect detection of dark matter, are also
+computed automatically. The propagation of charged particles in the Galactic halo is handled with a new module. </span><br><br>
+
+The decay widths of all particles in the model as well as the cross-sections for production of any pair of new particles at colliders are 
+computed automatically as well as the production of a pair of dark matter particles with a jet.  </span><br><br>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+Starting from version 4.2, the relic density of two stable massive particles
+as well as their direct and indirect detection rates are computed. It is assumed that the model contains two dark sectors, each with different transformation properties under a discrete symmetry. </span><br><br>
+
+Version 4.3 includes links to HiggsSignals, Lilith and SmodelS to confront a dark model with LHC results on the Higgs and on searches for new particles. 
+
+The package includes the minimal supersymmetric standard model (<span style="color: rgb(200, 0, 55);">MSSM</span>),
+the <span style="color: rgb(200, 0, 55);">NMSSM</span>, 
+the <span style="color: rgb(200, 0, 55);">UMSSM</span>, the MSSM with complex phases (<span style="color: rgb(200, 0, 55);">CPVMSSM</span>), the little Higgs
+model (<span style="color: rgb(200, 0, 55);">LHM</span>),
+the inert doublet model (<span style="color: rgb(200, 0, 55);">IDM</span>), 
+a inert doublet model with a Z3 discrete symmetry (<span style="color: rgb(200, 0, 55);">Z3IDM</span>),
+and  a model with inert doublet and singlet with a Z4 symmetry (<span style="color: rgb(200, 0, 55);">Z4IDSM</span>).  Facilities to include an arbitrary model are provided.<br><br>
+
+
+Other models available:<br>
+&nbsp;</span></b><a href="../downloadarea/models/Z5M.tgz"><b><span style="font-size: 13.5pt; font-family: Arial; color: black;" lang="EN-GB">Z5M </span></b></a><span style="" lang="EN-GB"> : two scalar singlets and a Z5 symmetry<br>
+&nbsp;</span></b><a href="../downloadarea/models/RHNM.tgz"><b><span style="font-size: 13.5pt; font-family: Arial; color: black;" lang="EN-GB">RHNM </span></b></a><span style="" lang="EN-GB"> : right-handed neutrino dark matter<br>
+&nbsp;</span></b><a href="../downloadarea/models/SM4.tgz"><b><span style="font-size: 13.5pt; font-family: Arial; color: black;" lang="EN-GB">SM4 </span></b></a><span style="" lang="EN-GB"> : SM with a fourth generation of lepton<br>
+
+
+
+<br>
+
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font
+size="-1"><big>Present version (June 2017) is <a
+href="docu_4.3.html">micromegas 4.3.5</a></big><br><br>
+
+</b></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+<script language="JavaScript"><!--
+document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+document.write(document.referrer);
+document.write("\" HEIGHT=1 WIDTH=1>");
+// -->
+</script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v4.3/ax.pl" height=1 width=1></noscript>
+
+
+
+<span style="color: rgb(200, 0, 55);">UPDATES</span><br><br> 
+<span style="color: rgb(100, 0, 120);">micromegas_4.3.5 (21/06/2017):</span><br><br>
+
+1)   LanHEP  is included.<br><br>
+   
+2) We have removed a bug in the computation of the loop integral to DM-quark scattering relevant for direct detection  calculation. <br><br>
+
+3) We have removed a bug  which lead to zero elastic scattering for direct detection.<br><br>
+
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.3.4 (19/05/2017):</span><br><br>
+
+1) Contains new functions (LilithMO and hbBlocksMO) to generate automatically the input files for Lilith and HiggsBounds(HiggsSignals) for any model. The functions  LilithMDL and hbBlocksMDL which generate the same input files for specific models are also provided, bugs contained in previous versions were removed.<br><br>
+
+2) Two separate flags are now available to call HIGGSBOUNDS and HIGGSSIGNALS.<br><br>
+
+3) Includes new version of NMSSMTools_5.1.1, Lilith_1.1 and SmodelS_1.1.0patch1.<br><br>
+
+4) Previous versions of micrOMEGAs used a function, parton_alpha(Q), which
+depends on the PDF for the calculation of QCD corrections. In this version parton_alpha(Q) is used only for collider processes, otherwise the function alphaQCD(Q) which is independent of the parton distribution is used. <br><br>
+
+5)  The numerical instability found in the computation of Omega has been fixed. This occurred in scenarios with a narrow resonance with a mass larger that 2Mcdm and was problematic only in a region where the relic density was very small Omega~0.0001 and with the flag fast=0.
+We have also  implemented  an option fast=-1 for a more robust calculation of DM (co-)annihilation in the presence of resonances.  <br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.3.2 (09/11/2016):</span><br><br>
+
+1) Automatic check of python version, version 2.X is needed for  Lilith and  SmodelS. <br><br>
+2) Includes new version of NMSSMTools_5.0.1.<br><br>
+3) One-loop corrections to direct detection for scalar and vector dark matter. <br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.3 (02/06/2016):</span><br><br>
+
+1) Interfaces to Lilith, SmodelS, HiggsBounds and HiggsSignals have been updated.<br><br>
+2) HiggsBounds and HiggsSignals are not included in the distribution and are downloaded from this site at the first compilation.<br><br>
+3) The model UMSSM is included in the distribution.<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.2.5 (30/10/2015):</span><br><br>
+
+1) Routines for limits from IceCube22 are updated, see arXiv:1507.07987.<br><br>
+ 2) We fixed a bug for direct detection in case of two component DM.<br><br>
+ 3)  In the interface with SModelS we now check the existence of a SM Higgs and pass this information to SModelS.<br><br>
+ 4)   In CalcHEP we have improved the routine which defines the electric charge of particles.<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.2.3 (05/10/2015):</span><br><br>
+1) CalcHEP has been upgraded to version 3.6.26. It allows parallel calculations for Monte Carlo integration and for generation of matrix elements.<br><br>
+
+2) The neutrino module is updated, it includes recently obtained neutrino spectra for DM annihilation in the Sun,  WimpSim and PPPC4DM.  Moreover functions to compare the predicted neutrino flux from DM captured in the Sun with the data of IceCube and to calculate an exclusion level are available.<br><br>
+  
+3) Loop corrections for direct detection of vector and scalar DM as computed in  arXiv:1012.5455 and arXiv:1502.02244 are implemented.<br><br>
+
+4) A new model is available (UMSSM).<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.1.7 (19/02/2015):</span><br><br>
+1) Improvement of the numerical routine for stiff equations from Numerical Recipes.<br><br>
+
+2) Removed a bug that led to segmentation fault on MAC when calculating the gamma-ray line in NMSSM and Z3 models.<br><br>
+
+3) Fixed a  bug in gammaFluxTabGC (this function returns zero in 4.1.5).<br><br>
+
+4) Fixed a bug in the summation of the contributions of two DM components for direct and indirect detection.<br><br> 
+   
+5) Removed a bug that led to segmentation fault for calculation of Omega in Z5M model.<br><br>
+  
+
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.1.5 (05/01/2015):</span><br><br>
+1) Modification of CalHEP including a) unpdate of batch routines b) the keys
+ ^+ and ^-   allow to  change the size of window
+          c)   generated events can be read by Pythia-8
+          d)  Recently implemented  LanHEP trick for generation of effective  vertices is supported.
+<br><br>
+  
+2) slhaDecayPrint has new argument which allows to decay virtual W/Z. 
+<br><br>
+3) Bug removed in slhaPlus for negative PDG numbers. It appeared when in the slha file a  decay was defined for a negative PDG or when trying to get width/branching.
+<br><br>
+4) In the  CPVMSSM, the coupling Am is now passed to CPsuperH.
+<br><br>
+5)  Bug removed in  lib/hbBlocks.c files for   IDM, LHM, MSSM, Z3MH, 
+SM loop-induced Higgs couplings are no longer evaluated  in models files but with a universal procedure
+                 lGGhSM(Mh,aQCD,  Mcp, Mbp,Mtp,vev);
+                 lGGhSM(Mh,aQCD,  Mcp, Mbp,Mtp,vev)
+<br><br>                 
+6) For direct/indirect detection in models with 2DM components, we fixed a bug in defining the fraction 
+               of each DM component. 
+<br><br>
+7)   Codes of HIGGSBOUNDS/SIGNALS  are not included anymore in micrOMEGAs distribution. 
+<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.1.4 (12/12/2014):</span><br><br>
+1) Bug fixed in computation of 3-body decay rates when running micromegas in a cycle, thanks to Jonathan Da Silva and Ursula Laa. 
+<br><br>
+
+
+<span style="color: rgb(100, 0, 120);">micromegas_4.1.3 (5/12/2014):</span><br><br>
+
+1) All features of micromegas_3.6.9 were merged with those of micromegas_4.1 so that the new code can treat both one and two dark matter candidates. 
+<br><br>
+2) Bug fixed in displaying individual channel contributions to sigma_v in micromegas_4.1, the total cross section was correct. 
+<br><br>
+3) Modification of the hCollider function, possibility to define 
+a)  renormalization and factorization scales b) option to include jet with minimal value for transverse c) option to restrict the number of quarks taken into account ( both for incoming/outgoing particles), see the manual.
+<br><br>
+4) New function vSigmaCC(T,cc) to calculate the  thermally average sigma_v for both 2->2 and 2-> 3 process.
+new arguments to define the scale, see the manual
+<br><br>
+<span style="color: rgb(100, 0, 120);">micromegas_3.6.9.2 (14/05/2014):</span><br><br>
+
+
+
+1) Compilation problem fixed
+<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.6.9 (27/04/2014):</span><br><br>
+
+
+
+1) The model files for Z3MH were modified to agree with the notation in http://arxiv.org/abs/arXiv:1403.4960 : the masses of the non standard Higgses are used as input parameters and the mixing angle between the dark Higgses is redefined.
+<br><br>
+2) Sign corrected in the HGG effective vertices for all models (no incidence on the partial widths). 
+<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.6.8 (07/04/2014):</span><br><br>
+
+
+
+1) The SLHAplus package contains both C and Fortran code (for users  who prefer to
+write main programs in Fortran).  Unfortunately some MAC computers have
+installed 64-bit gcc together with 32-bit Fortran leading to a fatal problem
+in compilation. In order to avoid this problem for users working with C main programs,  the corresponding Fortran code CalcHEP_src/lib/faux.o is not included in the SLHAplus library. 
+<br><br>
+
+
+2) The obsolete function   "finite" is replaced by "isfinite" in accordance with 
+C99, POSIX.1. This avoids numerous warnings during compilation on MAC. 
+<br><br>
+
+3) The parameter BWrange that determines the range of application of the Breit-Wigner formula when computing a cross-section near a resonance can now be set by the user. Details can be found in the on-line manual.
+<br><br>
+
+4) A bug in constructing the decay spectra  of new particles when the produced particles have very small momenta is fixed.   
+<br><br>
+5) The Makefile generated by the newProject command has been improved to link
+automatically all static libraries disposed in the  MODEL/lib directory.
+(Thanks to Andreas Goudelis)
+<br><br>
+6) HiggsSignal is updated to version 1.2.0
+<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.6.7 (02/02/2014):</span><br><br>
+
+1) Interface with HiggsSignals.
+<br><br>
+2) A bug in spin dependent nuclear form factor for Xe129 and Te125  is fixed.
+<br><br>
+
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.3 (01/10/2013):</span><br><br>
+
+1) A bug (infinite cycle) in calculating particle widths is fixed.
+<br><br>
+2) The calculation of the relic density taking into account virtual W/Z works faster now.
+<br><br>
+3) The LanHEP source files now include an  option to declare public variables.
+<br><br>
+4) The PDG codes of squarks are corrected. 
+<br><br>
+5) In the MSSM model we have corrected a  mistake in reading tb from an SLHA file input (thanks to Andre Lessa).
+<br><br>
+6) The Mass Limit function in the MSSM was updated.
+<br><br>
+7) The call of "newProcess" in NMSSM/main.[c/F] is corrected.
+<br><br>
+8) We have removed one parameter in the vSigma function.
+<br><br>
+9) More channels are included in the generation of gamma bremsstrahlung.
+<br><br>
+10) calcSpectrum now prints  the relative weights of subprocesses (previously this was done in  vSigma).
+<br><br>
+11) We have added   processes with gamma bremsstrahlung to the list of processes
+printed by calcSpectrum.
+<br><br>
+12) We have fixed a bug  (due to numerical instability) in the  positron spectra computed with gamma bremsstrahlung. 
+<br><br>
+13)  To work with low mass DM we set a lower limit of 1 GeV for the QCD scale parameter in micrOMEGAs.
+<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.2 (17/06/0213):</span><br><br>
+
+1) A bug in some LINUX operating systems led to a segmentation fault on some computers, this problem is bypassed.<br><br>
+
+2) We have corrected a bug in the implementation of the option to access parameters in  func1.mdl via the 
+findValW(varName) command.<br><br>
+
+3) In the  Direct Detection module, we have added  an instruction to restore the  quark nucleon  form factors  used as default in version 2.4.5.<br><br>
+ 
+4) A bug in the computation of h->GG and h->AA  in the IDM model is removed ( the mass of the pseudoscalar Higgs was used instead of mass of charged one) ( thanks to Beranger Dumont).<br><br> 
+
+5) In MSSM-like model files  a star(*) is added before the hGG and hAAcouplings to make these variables public and ensure that they can be accessed when calculating the reduced Higgs couplings.<br><br> 
+ 
+6) A bug in cleaning the HiggsBounds directory is fixed.<br><br>  
+
+7) The CALCHEP model files  for the CPVMSSM and the LHM are updated.<br><br>
+
+8) The parameter Am (trilinear coupling of the muon)  is now added to the list of parameters  of the NMSSM and is passed to NMSSMTools.<br><br>
+
+9) A misprint in a commented instruction contained in all main.c files is fixed (ZWdecay -> VWdecay)<br><br>
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.1 (01/06/0213):</span><br><br>
+
+1) Problem with small memory leak was fixed  (thanks to Kees Jan de Vries)<br><br>
+
+2) VVdecay is replaced with  VWdecay and VZdecay, by default 3 body final states are 
+switched off (VW/VZdecay=0).  VW/VZdecay=1 takes into  account processes with virtual W/Z for DM annihilation 
+only while VW/VZdecay=2 include virtual W/Z in  co-annihilation processes as well.<br><br>
+
+3) For the calculation of the relic density in modes VW/VZdecay>0 we implement a matching procedure between  2->3  and 2->2 processes. It leads to an increase of the  relic density when DM annihilate into on-shell W/Z and only 2->2 processes are included.
+The effect is caused by a kinematical cut on  Breit-Wigner distribution.<br><br>
+
+4) A new directory mdlIndep contains routines for model independent calculation of DM observables.<br><br>
+
+5) Parameter names with  underscore symbol  are now  permitted  in models.<br><br>
+
+6) Mb_pole and Mc_pole masses calculated at 1-loop are used for h->GG (similar to hdecay).<br><br>
+
+7) Widths of W and Z are calculated automatically in all models. It is  needed
+for a more precise calculation of processes with virtual W/Z.<br><br>
+
+8) Makefile for SuSpect is corrected (extra space symbol is deleted)<br><br> 
+
+9) NMSSMTools_4.0.0 is updated<br><br>
+ 
+
+
+<span style="color: rgb(100, 0, 120);">micromegas_3.0.24 (16/05/0213):</span><br><br>
+
+1) Bug removed in the assignment of MH3,mu and MSOFT in the SUGRA option of the MSSM.<br><br>
+
+</b></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+<script language="JavaScript"><!--
+document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+document.write(document.referrer);
+document.write("\" HEIGHT=1 WIDTH=1>");
+// -->
+</script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v4.3/ax.pl" height=1 width=1></noscript>
+
+
+
+
+
+
+
+
+
+
+
+</font></font></font></b>
+</body>
+</html>
+
+
+
+
+
+
+
+
+</font></font></font></b>
+</body>
+</html>

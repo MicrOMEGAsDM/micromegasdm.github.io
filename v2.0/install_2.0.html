@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="Author" content="Fawzi Boudjema">
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>installation</title>
+</head>
+
+
+<body nosave="" alink="#ff0000" bgcolor="#c0c0c0" link="#0000ee" text="#000000" vlink="#551a8b">
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" cols="1" width="100%">
+
+
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+
+
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">Installation&nbsp; of&nbsp; Micromegas_2.0 (MSSM, CPVMSSM, NMSSM, and Generic Models)</font></font></font></b><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1"><span style="color: rgb(255, 255, 255);"></span></font></font></font></b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1"><span style="color: rgb(255, 255, 255);"><small><span style="font-style: italic;"></span></small></span></font></font></font></td>
+
+
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt;font-family:
+Arial;mso-ansi-language:EN-GB'><br>
+The compressed File micromegas_2.0.7.tgz is about 1.3Mb.&nbsp; &nbsp;</span></b><a href="../downloadarea/code/micromegas_2.0.7.tgz"><b><span style="font-size: 13.5pt; font-family: Arial; color: black;" lang="EN-GB">DOWNLOAD </span></b></a><span style="" lang="EN-GB"><br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp; micromegas_2.0 was tested for&nbsp; Linux, OSF1, SunOS and Darwin,Cygwin.<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+First unpack the file, for example tar -zxvf micromegas_2.0.7.tgz<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+This will create a directory called micromegas_2.0. <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<big><span style="text-decoration: underline; font-style: italic;">I. General Installation</span></big><br>
+
+
+
+
+
+
+In this directory you should first launch,<br>
+
+
+
+
+
+
+gmake<br>
+
+
+
+
+
+
+( We use 'gmake' options in our Makefiles. If you do not have 'gmake' &nbsp;use 'make' instead)<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+This should gererate files with compilers flags<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CalcHEP_src/FlagsForMake<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CalcHEP_src/FlagsForSh<br>
+
+
+
+
+
+
+&nbsp;&nbsp; <br>
+
+
+
+
+
+
+and&nbsp; compile&nbsp; <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CalcHEP_src/bin/s_calchep <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sources/micromegas.a<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+Possible problems are discussed in <a href="#compilers_flags">Section VI below</a>. <br>
+
+
+
+
+
+
+&nbsp; <br>
+
+
+
+
+
+
+<big><span style="font-style: italic;"><span style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">II.</span>&nbsp; The MSSM</span> </span><small>(for a general description of all the features go <a href="https://lapth.cnrs.fr/micromegas/v13/intro_1.3.html">here</a>)</small><span style="text-decoration: underline; font-style: italic;"></span></big><br>
+
+
+
+
+
+
+To work with the MSSM go to the&nbsp; MSSM&nbsp; directory. <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+To generate the executable use<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+gmake main=&lt;source file&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+
+
+
+
+
+
+where &lt;source file&gt; is either a&nbsp; C or Fortran file, for example omg.F, sugomg.c<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+The list of functions you can use in&nbsp; your programs is described in <br>
+
+
+
+
+
+
+&nbsp; <a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0607059">hep-ph/0607059</a> and&nbsp; <a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0405253">hep-ph/0405253</a><br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+Cygwin users should&nbsp; launch the executable with <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; ../cgwRun &lt;exe with parameters&gt;<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp; <br>
+
+
+
+
+
+
+III. <big style="font-style: italic;"><span style="color: rgb(255, 0, 0);">CPVMSSM and NMSSM</span></big><br>
+
+
+
+
+
+
+Two other models are provided by the micrOMEGAs team for a seamless integration within &nbsp;micrOMEGAs 2.0: <br>
+
+
+
+
+
+
+&nbsp;&nbsp; <br>
+
+
+
+The CP violating version of the MSSM, CPVMSSM (see <a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0604150">here</a> for a description of the model)<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; and the the NMSSM (see <a href="http://xxx.lanl.gov/abs/hep-ph?papernum=0505142">here</a> for a description of the model). <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp; These can be downloaded separately:<br>
+
+
+
+
+
+
+&nbsp;<br>
+
+
+
+
+
+
+&nbsp;<a href="http://lappweb.in2p3.fr/cgi-bin/cgi-lapth/micromegas/tracker/down.pl?ID=12">download CPVMSSM</a> &nbsp; (this version has at the moment only been tested on Linux, Darwin and Cygwin)<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp;<a href="http://lappweb.in2p3.fr/cgi-bin/cgi-lapth/micromegas/tracker/down.pl?ID=16">download NMSSM (July 2007)</a><br>
+
+
+
+
+
+
+&nbsp; <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+After download, unpack the file in the micromegas_2.0 directory. This
+will create a new &nbsp;directory similar to the MSSM directory. For
+additional information &nbsp;read the&nbsp; README file in the
+directory of the model.<br>
+
+
+
+
+
+
+&nbsp; <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+IV.<big style="font-style: italic; text-decoration: underline; color: rgb(255, 0, 0);"> </big></font></font></font></b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big style="font-style: italic; text-decoration: underline; color: rgb(255, 0, 0);"><big>Other models</big></big></font></font></font><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big style="font-style: italic; text-decoration: underline; color: rgb(255, 0, 0);"> </big><br>
+
+
+
+
+
+
+To implement a new model,&nbsp; launch <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; ./newProject&nbsp; &lt;project name&gt;<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+&nbsp;Then directory &lt;project name&gt; will be created with all the
+needed subdirectories and&nbsp; sample&nbsp; files. Further
+instructions can be found in the local &nbsp;README file. <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+
+
+V. <big style="color: rgb(255, 0, 0);"><span style="text-decoration: underline; font-style: italic;">To clean all generated files</span></big> use <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ./clean <br>
+
+
+
+
+
+
+&nbsp;&nbsp; launched from micromegas_2.0 directory. In each model directory you <br>
+
+
+
+
+
+
+&nbsp;&nbsp; can call <br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; gmake clean <br>
+
+
+
+
+
+
+&nbsp;&nbsp; to remove all generated files in this particular directory.<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<big><span style="font-style: italic; text-decoration: underline;"><a name="compilers_flags"></a><span style="color: rgb(255, 0, 0);">VI. Compilers and&nbsp; their Flags</span></span></big><br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Options for compilation are stored in two files
+FlagsForSh and &nbsp;FlagsForMake&nbsp; that should contain identical
+settings presented &nbsp;in different formats. These files are located
+in the CalcHEP_src &nbsp;directory and initiated by the getFlags
+command launched from &nbsp;the&nbsp; same directory. <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; If FlagsForSh does not exist, getFlags creates it
+according to the operation system name returned by the 'uname' Unix
+command.<br>
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; If FlagsForSh exists, getFlags reads all
+parameters&nbsp; from this &nbsp;file, checks and&nbsp; modifies them
+if it needs, and writes down new FlagsForSh and FlagsForMake. It also
+informs you in case of problem.<br>
+
+
+
+
+
+
+&nbsp;&nbsp; <br>
+
+
+
+
+
+
+&nbsp; &nbsp; In case of problem the user can change compiler flags
+&nbsp;written in&nbsp; FlagsForSh and launch getFlags&nbsp; again
+until&nbsp;it will finish without error code and FagsForMake will be
+generated. The meaning of all flags is explained in the FlagsForSh
+file. <br>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</font></font></font></b><br>
+
+
+
+
+
+
+
+
+<script language="JavaScript"><!--
+                        document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+                        document.write(document.referrer);
+                        document.write("\" HEIGHT=1 WIDTH=1>");
+                // -->
+                </script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v2.0/ax.pl" height=1 width=1></noscript>
+
+
+
+
+
+
+
+
+</body>
+</html>

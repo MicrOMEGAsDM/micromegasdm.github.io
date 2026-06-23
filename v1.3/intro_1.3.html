@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+  
+  
+  <meta name="Author" content="Fawzi Boudjema">
+
+
+  
+  
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+
+
+  
+  
+  <title>MicrOMEGAs:Introduction</title>
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(192, 192, 192);" nosave="" alink="#ff0000" link="#0000ee" vlink="#551a8b">
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><b><br>
+
+
+</b>
+<table style="width: 1229px; height: 26px;" bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" cols="1">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">Introduction:
+Micromegas v_1.3 for the MSSM<br>
+
+
+      </font></font></font></b></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+MicrOMEGAs is a code written in C for
+the calculation of the relic
+density in supersymmetry. It also calls some external
+FORTRAN functions. All annihilation processes as well as
+co-annihilation processes are calculated exactly through a
+supersymmetric version of CalcHEP. Co-annihilation processes include
+any type of slepton, squark, possible chargino
+or next to lightest neutralino as well as a gluino. By default the
+lightest neutralino is assumed to be the LSP, but the user
+can set any supersymmetric particle (not including Higgses!) to be the
+LSP, in particular a sneutrino. All in all we have included about 2800
+processes not counting charge conjugate states. Care is taken to deal
+with
+resonances (in particular for the Higgs resonances) and thresholds. <br>
+
+
+<br>
+
+
+The
+cross-sections extracted from <a href="http://www.ifh.de/~pukhov/calchep.html"><span style="font-style: italic;">CalcHEP</span></a>
+are calculated exactly
+using loop-corrected masses and mixings as specified in the <a href="http://www.thep.lu.se/~zeiler/slha/"><span style="font-style: italic;">SUSY
+Les Houches Accord</span></a>. The input parameters can be
+either the
+soft SUSY
+parameters in a general MSSM or the parameters of a SUGRA model
+specified at some high scale (GUT). In the latter case, a link with<a href="http://w3.lpm.univ-montp2.fr/~kneur/suspect.html">
+SuSpect</a>,
+<a href="http://allanach.home.cern.ch/allanach/softsusy.html">Softsusy</a>,
+<a href="http://www-theorie.physik.unizh.ch/~porod/SPheno.html">Spheno</a>
+and<a href="http://www.phy.bnl.gov/~isajet/"> Isajet</a>
+allows to
+calculate the
+supersymmetric spectrum, Higgs masses, as well as mixing matrices.
+Higher-order corrections to Higgs couplings to quark pairs including
+QCD as well as some SUSY corrections<br>
+
+
+( &Delta;M</font></font></font></b><big><font style="font-weight: bold;" face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><sub>b</sub></big></font></font></font></big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">( are
+implemented. Routines
+calculating the muon g-2, b</font></font></font></b><big><big><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><big>
+&rarr;</big></big></font></font></font></big></big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> s &gamma; and B</font></font></font></b><big><font style="font-weight: bold;" face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><sub>s
+</sub></big></font></font></font><big><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><big>&rarr;</big></big></font></font></font></big></big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> &mu; &mu; are
+also
+included. In particular the</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> b</font></font></font></b><big><big><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><big>
+&rarr;</big></big></font></font></font></big></big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> s &gamma;</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">&nbsp;&nbsp;
+routine includes an improved
+NLO for the SM and the charged Higgs while the SUSY large tan(beta)
+effects beyond leading-order are included. This new version also
+provides cross-sections for any 2</font></font></font></b><big><big><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><big>&rarr;</big></big></font></font></font></big></big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> </font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> 2
+process as well as partial
+decay widths for two-body final states in the MSSM allowing for easy
+simulation at colliders.
+We also provide a sample file to be used for scans over a set of
+parameters as in mSUGRA. It is also possible to view the
+contributions of different channels to the relic density. <br>
+
+
+<br>
+
+
+System
+requirements: C compiler, Fortran compiler, 500 kb of disk space for
+download, a minimum of 20Mb as working space. Tested on: Dec Alpha,
+Silicon Graphics and Linux (Red Hat,Suse), SunOS and HP-UX . <br>
+
+
+<br>
+</font></font></font></b></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b>
+<table style="width: 100%; text-align: left;">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top; background-color: rgb(204, 204, 204);"><big><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>Current
+version</big></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>(August 2005) </big></font></font></font></b></big><small><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big> : <big>micromegas_1.3.7</big><br>
+      </big></font></font></font></b><span style="font-weight: bold;">Removed a&nbsp; bug in the interface with non-universal SUGRA models for SLHA 
+versions. No
+&nbsp;change in the SuSpect or Isajet interface(thanks to Joern Kersten)&nbsp;</span></small><small><span style="font-family: arial; font-weight: bold;"></span></small>
+      </td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+</font></font></font></b><br>
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b>
+<table style="width: 100%; text-align: left;">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top; background-color: rgb(204, 204, 204);"><small><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>micromegas_1.3.6 (June 2005)<br>
+
+
+      </big></font></font></font></b><font style="font-style: italic;" face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>changes
+and additions from 1.3.5</big></font></font></font><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+      </big></font></font></font></b><span style="font-family: arial;">1. SuSpect
+2.34 is
+implemented.&nbsp; data/s_cycle.res is updated for new&nbsp;
+SuSpect </span><br style="font-family: arial;">
+
+
+      <span style="font-family: arial;">2.
+More
+accurate treatment of SuSpect and Isajet error codes, sometimes a
+warning signal was treated as an error signal. </span><br style="font-family: arial;">
+
+
+      <span style="font-family: arial;">3.
+More
+accurate treatment of widths.:&nbsp; widths in s-channel included
+only
+near resonance (for example |2MLSP-mh|&lt;2gammaH)&nbsp;</span></small>
+      </td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+
+<br>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b>
+<table style="width: 100%; text-align: left;">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top; background-color: rgb(204, 204, 204);"><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><big>micromegas_1.3.5
+(May 2005)</big></big></font></font></font><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+      <small>Only change from </small></big></font></font></font><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>micromegas_1.3.4
+      </big></font></font></font><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><small>is a correction of
+a&nbsp;
+small bug in B_s--&gt;&nbsp; mu mu routine (Thanks to Michael
+Ramage)</small></big></font></font></font><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+      </big></font></font></font></b></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b>
+<table style="text-align: left; width: 100%; background-color: rgb(204, 204, 204);">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="vertical-align: top;"><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">(</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big>micromegas_1.3.4
+(April 2005)<br>
+
+
+      <br>
+
+
+      </big></font></font></font></b>
+      
+      
+      <pre style="font-family: courier new,courier,monospace;" wrap="">1. New SuSpect 2.33 is attached and is the default RGE code.<br><br>2. Bugs were removed from Fortran main sample programs (thanks to Werner Porod for pointing out the bugs).<br><br>3. Calchep/micromegas for Darwin (Unix on MAC) is now supported (thanks to Alexander Belyaev for his help).<br><br>4. The micro_make file was rebuilt: <br> a) micro_make clean<br> removes all generated files (de-installation);<br> b) automatically selects between make and gmake.<br> <br><br>5. SLHA output updated: we now make a complete SLHA output which<br>contains all block and all parameters, not only the ones that are used in micrOMEGAs.<br><br>6. The SOFTSUSY interface is modified to force the package to calculate Am. If Am is not calculated by the RGE code, we use Am=Al (as in Isajet).<br> <br>7. When several micromegas program run at the same time, we have replaced the LOCK file signal that the library is busy with the standard 'lockf' UNIX tool.<br><br>8. By default all the auxiliary and output files generated by RGE (in particular<br>suspect2.out) are removed. To save all files change the switch position with the command<br>delFiles(0)[call delFiles(0)] - to save files;<br>delFiles(1)[call delFiles(1)] - to restore default regime.<br><br>9. The bsg_nlo.c routine now reads MbPole, Mtp (pole) and alfSMZ from the main micrOMEGAs program. MbPole is calculated from the input value MbMb within micrOMEGAs. <br><br>10. Files from 'rge' and 'suspect' directories are moved to<br> 'sources/'. <br><br>11. Bug removed in gluino coannihilation channels (Bug reported by Dan Hooper)</pre>
+
+
+      <br>
+
+
+      <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+      </big></font></font></font></b></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+<br>
+
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+</big></font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Previous version</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">(January
+2005) </font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> :
+<big>micromegas_1.3.3</big></font></font></font></b><br>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><big><br>
+
+
+</big></font></font></font></b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Changes and additions to </font></font></font><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+micromegas_1.3.1 include</font></font></font><br>
+
+
+</font></font></font></b>
+<ul style="font-family: helvetica,arial,sans-serif;">
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>Bug
+removed in interface with SoftSUSY:
+correct reading of
+mixing angles for sfermions of the third generation. </small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>Several
+bugs that led to a program crash were
+removed.</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>The
+default spectrum calculator code is
+suspect_2.31</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>In
+the function decay2 which calculates
+partial widths,
+the strong coupling is evaluated at the scale=mass of decaying particle.</small></font></font></font></b></li>
+
+
+</ul>
+
+
+<pre style="font-family: helvetica,arial,sans-serif;" wrap=""><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small><br><span style="font-style: italic; font-weight: bold;">New Extras:</span><br><br></small></font></font></font></b></pre>
+
+
+<ul style="font-family: helvetica,arial,sans-serif;">
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>1.
+The 'printMasses' routine now also displays
+the
+contents of the lightest neutralino:</small></font></font></font></b></li>
+
+
+</ul>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small><span style="font-family: helvetica,arial,sans-serif;">&nbsp;~o1
+= -0.825*bino +0.306*wino -0.454*higgsino1 +0.140*higgsino2</span></small>
+</font></font></font></b>
+<ul style="font-family: helvetica,arial,sans-serif;">
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>2.
+The 'masslimits_' function which checks the
+LEP limits
+on light SUSY particles sends a warning on the screen and returns a
+value that contains information about which sparticle masses do not
+satisfy the LEP limits.</small></font></font></font></b></li>
+
+
+</ul>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small><span style="font-family: helvetica,arial,sans-serif;">RES=
+I_chargino + 2*( I_sneutrino-e +2*(I_sneutrino-mu
++2*(I_sneutrino-tau+2*( I_selectron-R +2*(I_smuon-R +2*I_stau1)))))</span><br style="font-family: helvetica,arial,sans-serif;">
+
+
+<br style="font-family: helvetica,arial,sans-serif;">
+
+
+<span style="font-family: helvetica,arial,sans-serif;">where
+I_particle
+=0 if the LEP limit for this particle is satisfied and 1 otherwise.</span></small>
+</font></font></font></b>
+<ul style="font-family: helvetica,arial,sans-serif;">
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>3.
+New function writeLesH(char *fname) writes
+down MSSM
+parameters into a file in the Les Houches Accord format. Can be used
+for interface with PYTHIA 6.3</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>4.
+The function readInitFile(fname, LCon) used
+for
+calculations in EWSB models is split into two routines. First
+readEwsb(fileName) reads weak scale parameters from the file. Then
+suspectEwsbMSSM(LCon) or isajetEwsbMSSM(LCon) are used to evaluate
+masses and mixing angles. If LCon=0, loop corrections are implemented
+only to Higgs masses and mixing. Other masses and mixings are
+calculated at tree level. </small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>5.
+The gaugino mass parameters MG1 and MG2 are
+read from
+the MSOFT block in the Les Houches file. These parameters are then used
+in the b-&gt;sgamma routine (bsg_nlo).</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>6.
+New functions for interfacing with spectrum
+calculator
+codes in the AMSB model: <br>
+
+
+    </small></font></font></font></b></li>
+
+
+</ul>
+
+
+<ul style="margin-left: 40px; font-family: helvetica,arial,sans-serif;">
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>extern
+int suspectAMSB(double am0,double
+m32,double
+stgbeta,double ssgnmu0,double cq, double cu, double cd, double cl,
+double ce, double chu, double chd);</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>extern
+int isajetAMSB(double am0,double
+m32,double
+tb,double sgn)</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>extern
+int softSusyAMSB(double am0,double
+m32,double
+tb,double sgn)</small></font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><small>extern
+int sphenoAMSB(double am0,double
+m32,double
+tb,double sgn)</small></font></font></font></b></li>
+
+
+</ul>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+micromegas_1.3.1 : </font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">version</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">(July
+2003) </font></font></font></b><br>
+
+
+<font face="Arial,Helvetica"><font color="#000000"><font size="-1">Changes
+to </font></font></font><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+micromegas_1.3 included</font></font></font><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+</font></font></font></b>
+</font></font></font></b>
+<ul>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Default RGE
+package is now suspect2.3 </font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Default options
+in test programs are corrected. </font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Bug removed in
+Fortran version sugomg_f.f </font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Bug removed in
+ewsbInitFile() function </font></font></font></b></li>
+
+
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Data files
+omg.res and s_cycle.res corrected </font></font></font></b></li>
+
+
+</ul>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Version</font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">(19 May
+2003) </font></font></font></b><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"> :
+micromegas_1.3 </font></font></font></b><br>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+<a href="features_1.3.html">Changes from version_1.1.1</a>
+<br>
+
+
+<br>
+
+
+Shortcomings to be included in next versions: <br>
+
+
+<br>
+
+
+Although the program
+consists of about more 2800 processes (not counting charge conjugate
+related processes, etc),
+only tree-level processes are included. Missing are one-loop processes
+with 2 &gamma; and 2 gluons in the final state. For
+the relic density these are negligible. </font></font></font></b>
+</font></font></font></b>
+<dl>
+
+
+  <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="-1"> </font></font></font></b>
+  </font></font></font></b>
+</dl>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br style="font-weight: bold;">
+
+
+</font></font></font></b>
+<dl>
+
+
+  
+  
+  <p><b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp; <br>
+
+
+&nbsp;</font></font></font></b></p>
+
+
+</dl>
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+<script language="JavaScript">
+<!--
+document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+document.write(document.referrer);
+document.write("\" HEIGHT=1 WIDTH=1>");
+// -->
+</script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v1.3/ax.pl" height=1 width=1></noscript>
+
+
+</font></font></font></b>
+</body>
+</html>

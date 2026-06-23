@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Fawzi Boudjema">
+  <meta name="GENERATOR"
+ content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+  <title>MicrOMEGAs:Introduction</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(192, 192, 192);"
+ link="#0000ee" vlink="#551a8b" alink="#ff0000" nosave="">
+&nbsp;
+<table border="0" cellspacing="0" cellpadding="0" cols="1" width="100%"
+ bgcolor="#000000">
+  <tbody>
+    <tr>
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font
+ size="+1">Micromegas v_1.1 and v_1.0</font></font></font></b></td>
+    </tr>
+  </tbody>
+</table>
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+</font></font></font></b><b><font face="Arial,Helvetica"><font
+ color="#ff0000"><font size="+1">v_1.1</font></font></font></b><br>
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">MicrOMEGAs
+is a code written in&nbsp; C</font></font></font></b><b><font
+ face="Arial,Helvetica"><font color="#000000"><font size="-1"> for the
+calculation of the relic density in supersymmetry.
+It also calls some external FORTRAN functions. All annihilation
+processes
+as well as co-annihilation&nbsp; processes are calculated exactly
+through
+a supersymmetric version of <a
+ href="http://theory.sinp.msu.ru/comphep/">CompHEP</a>.
+Co-annihilation processes include any type of slepton, squark, possible
+chargino or next to lightest neutralino as well as a gluino. By default
+the lightest neutralino is assumed to be the LSP, but the user can set
+any supersymmetric particle (not including Higgses!) to be the LSP, in
+particular a sneutrino.</font></font></font></b><br>
+<dl>
+  <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">All
+in all we have included about 2800 processes not counting charge
+conjugate
+states. Care is taken to deal with resonances (in particular for the
+Higgs
+resonances) and thresholds.&nbsp; The present version uses<a
+ href="http://www.feynhiggs.de/">
+FeynHiggs</a>&nbsp; to calculate the Higgs masses and <a
+ href="http://www.desy.de/~spira/hdecay/">Hdecay</a>
+to include important QCD corrections to the width and partial widths of
+the Higgses. All Yukawa effects are included.&nbsp; MicrOMEGAs can run
+by providing an unconstrained set of soft SUSY parameters at the
+electroweak
+scale.&nbsp; In the present version, a mSUGRA model can be entered
+though
+the <a href="ftp://penguin.phy.bnl.gov/pub/isajet">Isajet </a>interface
+however any other RGE code can be used.&nbsp; Many constraints can be
+applied,
+apart from the present direct limits on the masses of the
+supersymmetric
+particles, we provide routines for the muon g-2, b-&gt;s \gamma&nbsp;
+and
+Delta rho.</font></font></font></b><br>
+  <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">We
+also provide a&nbsp; sample file to be used for scans over a set of
+parameters
+as in mSUGRA. It is also possible to view the contributions of
+different
+channels to the relic density.</font></font></font></b>
+  <p><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">System
+requirements: C compiler, Fortran compiler, 500 kb of disk space for
+download,
+a minimum of 10Mb as working space.</font></font></font></b> <br>
+  <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Tested
+on: Dec Alpha, Silicon Graphics and Linux (Red Hat,Suse),&nbsp;&nbsp;
+SunOS
+and HP-UX&nbsp; .</font></font></font></b> </p>
+  <p><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">Current
+version: micromegas_1.1.1 (23 August 2002)</font></font></font></b> <br>
+&nbsp;&nbsp; <b><a href="changes.html">Changes from version 1.0:</a></b>
+  <br>
+  <i><font face="Arial,Helvetica"><font color="#000000"><font size="-1">(1st
+version: micromegas_1.0, december 2001)</font></font></font></i> </p>
+  <p><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">Shortcomings
+to be included in next versions:</font></font></font></b> </p>
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">Although
+the program consists of about more 2800 processes (not counting charge
+conjugate related processes, etc), only tree-level processes are
+included.
+Missing are one-loop processes with 2\gamma and 2 gluons in the final
+state.
+For the relic density these are negligible.</font></font></font></b></li>
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">Radiative
+corrections to neutralino and chargino masses are not implemented in
+the
+current version.</font></font></font></b></li>
+  <li><b><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">A new
+routine for b-&gt;s\gamma which includes NLO effects and large tgb
+effects
+will be included soon.</font></font></font></b></li>
+  <br>
+&nbsp;
+</dl>
+<big style="color: rgb(255, 0, 0);"><big><span
+ style="font-weight: bold;">&nbsp;Documentation </span><a
+ href="docu.html"><small>here</small></a><span
+ style="font-weight: bold;"><br>
+</span></big></big>
+<dl>
+  <p>&nbsp; <big style="color: rgb(255, 0, 0);"><big><span
+ style="font-weight: bold;">Install </span><a href="install.html"><small>here</small></a><span
+ style="font-weight: bold;"><br>
+  <br>
+  </span></big></big>&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp; <br>
+&nbsp;</p>
+</dl>
+<script language="JavaScript">
+                <!--
+                        document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+                        document.write(document.referrer);
+                        document.write("\" HEIGHT=1 WIDTH=1>");
+                // -->
+                </script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v.1.1/ax.pl" height=1 width=1></noscript>
+</body>
+</html>

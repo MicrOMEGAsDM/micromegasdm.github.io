@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Fawzi Boudjema">
+  <meta name="GENERATOR"
+ content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+  <title>installation</title>
+</head>
+<body text="#000000" bgcolor="#c0c0c0" link="#0000ee" vlink="#551a8b"
+ alink="#ff0000" nosave="">
+&nbsp;
+<table border="0" cellspacing="0" cellpadding="0" cols="1" width="100%"
+ bgcolor="#000000">
+  <tbody>
+    <tr>
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font
+ size="+1">Installation
+instructions</font></font></font></b></td>
+    </tr>
+  </tbody>
+</table>
+<dl>
+  <b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">As
+of 25 May 2004, micrOMEGAS_1.1 has been downloaded<big><big
+ style="color: rgb(102, 0, 0);"><span style="color: rgb(102, 0, 0);"> </span>441</big></big>
+times<br>
+The
+compressed file micromegas_1.1.1.tar.gz is about 350 kb. </font></font></font><u><font
+ face="Book Antiqua"><font color="#990000"><font size="+1"><a
+ href="http://lappweb.in2p3.fr/cgi-bin/cgi-lapth/micromegas/tracker/down.pl?ID=1">DOWNLOAD</a></font></font></font></u></b><br>
+  <b>When unpacked and compiled the program will need at least 10Mb of
+disk space.</b>
+  <p><b><font face="Book Antiqua"><font color="#000000">First, unpack
+it.
+For example on UNIX this is done&nbsp; by typing successively:</font></font></b>
+  </p>
+  <p><b><i><font color="#000000"><font face="Book Antiqua">gzip -d </font><font
+ face="Arial,Helvetica"><font size="-1">micromegas_1.1.1.tar.gz</font></font></font></i></b>
+  <br>
+  <b><i><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">tar
+-xvf micromegas_1.1.1.tar</font></font></font></i></b>
+  <br>
+&nbsp;
+  </p>
+  <p><b><font color="#000000"><font face="Book Antiqua">This will
+create
+an archive or working directory called </font><i><font
+ face="Arial,Helvetica"><font size="-1">micromegas_1.1.1
+  </font></font></i><font face="Book Antiqua">which
+contains the C source files.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This directory
+should
+contain the following files and directories:</font></font></b>
+  <br>
+&nbsp;
+  </p>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>makefile :</i>&nbsp;&nbsp;
+This is what is needed for the compilation . Note that for mSUGRA type
+models we have not included Isajet. If you need to use micromegas with
+Isajet. You need to specify the exact path for the Isajet libraries by
+editing this file ( see the commented line SUGRA in the <i><a
+ href="https://lapth.cnrs.fr/micromegas/v.1.1/downloadarea/code/makefile.txt"
+ onmouseclick="MM_openBrWindow('downloadarea/code/makefile.txt','makefile','scrollbars=yes,width=550,height=700')"
+ onmouseover="MM_openBrWindow('downloadarea/code/makefile.txt','makefile','scrollbars=yes,width=400,height=400')">makefile</a></i>).</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>data</i> :
+This directory
+contains some sample data file, that we have used for testing.</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>datap</i>:
+This directory
+contains the data files that reproduce the results in Table 3 of the <a
+ href="https://lapth.cnrs.fr/micromegas/v.1.1/downloadarea/manual/micromega_cpc.pdf">manual</a><a
+ href="https://lapth.cnrs.fr/micromegas/v.1.1/downloadarea/manual/micromega.pdf">.</a></font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>omg.c</i> :
+This
+is the&nbsp; main program to call for calculating the relic density in
+the case of an unconstrained MSSM model. All input parameters are to be
+given at the weak scale. The input data file should follow the input of
+any of the files in the directories data and datap. By default the
+result
+will show on the screen. To make write on a outputfile replace stdout
+by
+    <i>filename</i>
+in the printMasses command, refer to the&nbsp; <a
+ href="https://lapth.cnrs.fr/micromegas/v.1.1/downloadarea/manual/micromega_cpc.pdf">manual</a>&nbsp;&nbsp;&nbsp;
+for more info.</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>sugomg.c</i>
+: as
+in omg but in the case of a mSUGRA model. This requires the isajet
+libraries
+that should be installed independently of micromegas. make sure to
+specify
+the correct path of the SUGRA variable in the makefile. The input
+parameters
+here: m0,mhf (m1/2),a0,tb,sgnmu,mtop,model (1 or 2 exact unification or
+not, see Isajet).</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>scycle.c </i>:
+This
+is an example of how to scan over a set of parameters, in this case
+(m0,mhf)
+for mSUGRA. You should specify the remaining input parameters
+(a0,tb,sgnmu,mtop,model).
+The output data file is scan.res</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000"><i>sources</i>
+: All
+the sources are stored here.</font></font></b></li>
+  <br>
+&nbsp;
+  <p>&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  </p>
+  <p><b>Compilation goes as follows (for more details and possible
+problems
+with some compilers and redefining some default options, <a
+ href="#detailscompil">click
+here</a>)</b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">A. To compile the
+main program&nbsp; <i>omg.c</i> (unconstrained MSSM) just type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">make</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This will create
+an exec file</font></font></b>
+  <br>
+  <b><i><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">omg</font></font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">to run (with a
+specific
+set of parameters defined in a <i>datafile</i> with the format as in
+the
+directory <i>data</i>), type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">omg datafile</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">if no datafile is
+specified the default values use the datafile defined in<i> data/datap1.</i></font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">Warning: The first
+time new processes need to be linked, compilation can take up to a few
+minutes depending on how many processes need to be generated.</font></font></b>
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">B. To compile
+the
+program <i>sugomg.c</i> (mSUGRA) just type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">make main=sugomg</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This will create
+an exec file</font></font></b>
+  <br>
+  <b><i><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">sugomg</font></font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">to run a model
+with&nbsp;
+m0=100 mhf=400 a0=0 tb=10 sgnmu=1 mtop=175 , type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">sugomg 100 400
+0 10 1 175</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">The output will
+be on the screen</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">Warning: The first
+time new processes need to be linked, compilation can take up to a few
+minutes depending on how many processes need to be generated.</font></font></b>
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">C. To compile
+the
+program <i>scycle.c</i> (mSUGRA with scan of parameters) just type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">make main=scycle</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This will create
+an exec file</font></font></b>
+  <br>
+  <b><i><font face="Arial,Helvetica"><font color="#000000"><font
+ size="-1">scycle</font></font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">to run a scan
+with&nbsp;
+a0=0 tb=10 sgnmu=1 mtop=175, type</font></font></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">scycle&nbsp;
+0 10 1 175</font></font></i></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">By default the
+scan
+over m0 and mhf is in the range 0-2000. This is specified in<i>
+scycle.c.
+  </i>To
+change this edit <i>scycle.c</i></font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">The output is in<i>
+scan.res</i></font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">Warning: The first
+time new processes need to be linked, compilation can take up to a few
+minutes depending on how many processes need to be generated.</font></font></b>
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  </p>
+  <p></p>
+  <hr size="4" noshade="noshade" width="100%"><br>
+  <a name="detailscompil"></a><b><font face="Book Antiqua"><font
+ color="#000000">The
+compilation is realized by means of standard "make" command. make
+compiles
+the package with the omg.c&nbsp; main program and creates the "omg"
+executable
+file. "make" is managed by&nbsp; the "makefile" stored in the root
+directory
+of the package. If your are on one of the platforms listed below</font></font></b><li>
+    <b><font face="Book Antiqua"><font color="#000000">Linux (PC)</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">IRIX/IRIX64
+(Silicon
+Graphics workstation)</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">OSF1 (DEC
+Alpha workstation)</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">SunOS</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">HP-UX</font></font></b></li>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">the "makefile"
+should
+set automatically all the needed compiler options. If you are on some
+other
+platform and encounter difficulties <a
+ href="mailto:micro.omegas@lapp.in2p3.fr">send
+us a message</a>.</font></font></b>
+  <p><b><font face="Book Antiqua"><font color="#000000">2. Fortran and
+C
+compiler names. These are defined in the first line of the&nbsp; <i>makefile:</i></font></font></b>
+  </p>
+  <p><b><i><font face="Book Antiqua"><font color="#000000">FC = f77</font></font></i></b>
+  <br>
+  <b><i><font face="Book Antiqua"><font color="#000000">CC = cc</font></font></i></b>
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">This is a
+standard
+for all platforms. But there are exceptions. Some Linux versions have <i>g77</i>
+instead of <i>f77</i>. Sometimes <i>cc</i> is not installed, but one
+can
+use the&nbsp; <i>gcc</i> compiler.</font></font></b>
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">3.&nbsp;
+C-compiler
+options.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">These are
+specified&nbsp;
+via&nbsp; the parameter <i>"COPT"</i>.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">We need two options</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">a) type "<i>char</i>"
+should mean "<i>signed char</i>"</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; For Linux
+and OSF1 it is a default.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; For
+IRIX/IRIX64
+it is set by&nbsp;&nbsp;&nbsp; "<i>-signed</i>"</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; In case of
+gcc compiler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "<i>-fsigned-cha</i>r"</font></font></b>
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">b) C-compiler
+should&nbsp;
+support features of the IEEE Standard for Binary Floating-Point
+Arithmetic,
+especially the&nbsp;&nbsp; treatment of denormalized numbers, NaNs, and
+infinities.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This option is a
+default for Linux and IRIX/IRIX64 but should be set for OSF1 by "-ieee".</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">This is not a hard
+requirement. But if you use the package for scanning a large number of
+MSSM parameters, you can meet a case when some constrains can not be
+evaluated,
+for example like in the case&nbsp; of a division by zero or evaluating
+the&nbsp; squared root from a negative number. If <i>IEEE</i> is not
+supported
+then the program will terminate&nbsp; with a diagnostic like "Float
+exception".</font></font></b>
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">4. C-linker
+options.&nbsp;
+We specify them via&nbsp; parameter "<i>LDOPT</i>".</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">Sometimes you
+need&nbsp;
+a special&nbsp; library to support the dynamic loader.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">In case of Linux
+it is "<i>-ldl</i>" also the option "-rdynamic" is needed for
+loader.&nbsp;
+For OSF1/IRIX/IRIX64&nbsp; one can use default options.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">Look at "<i>man
+dlope</i>n" to find these options.</font></font></b>
+  <br>
+  <b>If&nbsp; you&nbsp; use the Fortran ISAJET package to solve the RGE
+equations&nbsp; "make" will link&nbsp; our package&nbsp; with ISAJET if
+SUGRA variable is defined in the makefile. SUGRA should describe</b>
+  <br>
+  <b>the&nbsp; name&nbsp; of the library&nbsp; including&nbsp; the path
+(See commented line at the top of&nbsp; the makefile). <font
+ face="Book Antiqua"><font color="#000000">In
+this case one has&nbsp; to attach&nbsp; special Fortran library. It
+should
+be added to "LDOPT" too. The name of this library depends on the
+platform:</font></font></b>
+  </p>
+  <li><b><font face="Book Antiqua"><font color="#000000">For Red
+Hat&nbsp; Linux
+it is&nbsp; "-<i>lg2c</i>", but for some other versions it can be&nbsp;
+"<i>-f2c"</i>.</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">For
+IRIX/IRIX64 it set
+by "<i>-lftn</i>".</font></font></b></li>
+  <li><b><font face="Book Antiqua"><font color="#000000">For OSF1 one
+can use
+"<i>-lfor"</i>.</font></font></b></li>
+  <br>
+&nbsp;
+  <p>&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  </p>
+  <p><b><font face="Book Antiqua"><font color="#000000">If you have a
+problem
+with this option, write a primitive Fortran program and compile it by</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp;&nbsp; <i>f77
+-v &lt;you_program&gt;.f</i></font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">-v means verbose.
+F77 will show on the screen what it actually&nbsp; does.</font></font></b>
+  <br>
+  <b><font face="Book Antiqua"><font color="#000000">In particular, it
+pass to&nbsp; loader "<i>ld</i>" some libraries.</font></font></b>
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;
+  <br>
+&nbsp;</p>
+</dl>
+<script language="JavaScript">
+                <!--
+                        document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+                        document.write(document.referrer);
+                        document.write("\" HEIGHT=1 WIDTH=1>");
+                // -->
+                </script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v.1.1/ax.pl" height=1 width=1></noscript>
+</body>
+</html>

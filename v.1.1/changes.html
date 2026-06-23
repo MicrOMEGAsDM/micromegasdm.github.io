@@ -1,0 +1,76 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+   <meta name="Author" content="Fawzi Boudjema">
+   <title>changes</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center><b><font color="#FF0000"><font size=+2>List of changes /improvements
+from version 1.0 to version 1.1.1</font></font></b></center>
+
+<p><b>The main corrections are</b>
+<br>&nbsp;
+<ul>
+<li>
+<b>A. In omega.c</b></li>
+</ul>
+
+<ul>
+<ol>
+<li>
+<b>&nbsp;colour weight is corrected in co-annihilation processes involving
+coloured sparticles.</b></li>
+
+<li>
+<b>&nbsp;In the case of neutralino-stop1 co-annihilation, implementation
+of a more precise integration routine to treat an eventual s-channel top-pole
+.</b></li>
+
+<li>
+<b>&nbsp;some small corrections to improve the convergence of Xf are implemented.</b></li>
+
+<br>&nbsp;</ol>
+
+<li>
+<b>B. Names of anti-particles for dL,sL,sR have been corrected.</b></li>
+</ul>
+
+<blockquote>
+<li>
+<b>C. Other improvements and corrections:</b></li>
+</blockquote>
+
+<blockquote>
+<ol>
+<li>
+<b>&nbsp;The code can now run and has been tested on SunOS and HP-UX platforms.</b></li>
+
+<li>
+<b>&nbsp;In sugomg.c:&nbsp; The parameter "model" is removed. The default
+parameters are: double m0=1000,mhf=400,a0=0,tb=10,sgn=1,mtop=174.3; int
+model=1;</b></li>
+
+<li>
+<b>&nbsp;sugraVar(float m0, float ..) is replaced by sugraVar(double m0,
+double ..)</b></li>
+
+<li>
+<b>&nbsp;Comments added in gmuon.c and a bug has been fixed.</b></li>
+
+<li>
+<b>&nbsp;In "interface.c" new function "assignval_" for Fortran assignments.
+It is implemented in micro_sugra.f</b></li>
+
+<li>
+<b>&nbsp;Interface file sugraf.f is replaced by micro_sugra.f.</b></li>
+
+<li>
+<b>&nbsp;Bug in calchep (Segmentation fault) is removed.</b></li>
+</ol>
+</blockquote>
+
+</body>
+</html>

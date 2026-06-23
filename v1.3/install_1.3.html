@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+
+
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+  
+  
+  
+  <meta name="Author" content="Fawzi Boudjema">
+
+
+
+  
+  
+  
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+
+
+
+  
+  
+  
+  <title>installation</title>
+</head>
+
+
+<body nosave="" alink="#ff0000" bgcolor="#c0c0c0" link="#0000ee" text="#000000" vlink="#551a8b">
+
+
+
+<br>
+
+
+
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" cols="1" width="100%">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">Installation
+instructions for Micromegas_1.3.7(MSSM)<br>
+
+
+
+      </font></font></font></b></td>
+
+
+
+    </tr>
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+<dl>
+
+
+
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt;font-family:
+Arial;mso-ansi-language:EN-GB'><br>
+The compressed File micromegas_1.3.7.tgz is about 0.65Mb.&nbsp; &nbsp;</span></b><a href="../downloadarea/code/micromegas_1.3.7.tgz"><b><span style="font-size: 13.5pt; font-family: Arial; color: black;" lang="EN-GB">DOWNLOAD </span></b></a><span style="" lang="EN-GB"><br>
+
+
+
+  <b>When unpacked and compiled the program will need at least 20Mb of
+disk space.</b>
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">First, unpack
+it.
+For example on UNIX this is done&nbsp; by typing successively:</font></font></b>
+  </p>
+
+
+
+  
+  
+  
+  <p><b><i><font color="#000000"><font face="Book Antiqua">gzip -d </font><font face="Arial,Helvetica"><font size="-1">micromegas_1.3.7.tgz</font></font></font></i></b>
+  <br>
+
+
+
+  <b><i><font face="Arial,Helvetica"><font color="#000000"><font size="-1">tar
+-xvf micromegas_1.3.7.tar</font></font></font></i></b> <br>
+
+
+
+&nbsp; </p>
+
+
+
+  
+  
+  
+  <p><b><font color="#000000"><font face="Book Antiqua">This will
+create
+an archive or working directory called </font><i><font face="Arial,Helvetica"><font size="-1">micromegas_1.3 </font></font></i><font face="Book Antiqua">which
+contains the C source files.</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">This directory
+should
+contain the following files and directories:</font></font></b>
+&nbsp; <br style="font-weight: bold;">
+
+
+
+  </p>
+
+
+
+</dl>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">micro_make</span> : This is what is
+needed for the compilation . For SUGRA model
+only SUSPECT is included in our package. If you rather want to use
+SOFTSUSY or SPHENO you need to specify the directory where you have
+already installed these packages by editing this file. Likewise, to use
+ISAJET you should specify the exact path for the Isajet libraries by
+editing the micro_make file ( see the commented line EXTLIB). </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">data</span> :
+This directory contains some sample data file, that we have used for
+testing. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">sugomg.c </span>: main program to call
+for calculating the relic
+density
+in the case of SUGRA model. All input parameters are to be
+given at the GUT scale.
+If you want to use a RGE package other than SUSPECT make
+sure to modify the micro_make file appropriately. The
+input parameters are: m0,mhf (m1/2),a0,tb,sgnmu. Additional parameters
+are understood to be mtop,mb(mb), alphas(MZ)_MS.
+Non-universal boundary conditions at the high scale can be set directly
+in this file. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">sugomg_f.f</span> : the Fortran version
+of sugomg. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">omg.c</span> : main
+program to call for calculating the relic density
+in the case of an unconstrained MSSM model. All input parameters are to
+be
+given at the weak scale. The input data file should follow the input of
+any of
+the files in the directories data. By default the result will show
+on the screen. To write on an outputfile replace stdout by filename in
+the
+printMasses command, refer to the manual for more info. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">omg_f.f</span>: the
+Fortran version of omg. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">s_cycle.c</span> : This is an example
+of how to scan
+over a set of parameters, in
+this case 13 mSUGRA points of Battaglia et al. The output is given on
+the screen. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">cs_br.c</span>: sample main program to
+call for calculating widths
+and cross-sections within the SUGRA model. The SUGRA parameters are
+specified directly in the file. The user can add any process with two
+particles in the final state in the MSSM. </span></li>
+
+
+
+</ul>
+
+
+
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">sources</span> : All the sources are
+stored here</span></li>
+
+
+
+</ul>
+
+
+
+<span style="font-weight: bold;"><br>
+
+
+
+</span>
+<ul>
+
+
+
+  <li><span style="font-weight: bold;"><span style="color: rgb(255, 0, 0);">calchep</span> : move to this directory
+to start an interactive
+calchep session by calling calchep. </span><br>
+
+
+
+  </li>
+
+
+
+</ul>
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+<b>Compilation goes as follows (for more details and possible problems
+with some compilers and redefining some default options, <a href="#detailscompil">click
+here</a>)</b><br>
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+<big style="font-weight: bold;"><big>A</big></big>. <span style="font-weight: bold;"><br>
+
+
+
+To compile the program sugomg.c
+(mSUGRA) just type</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">&nbsp;./micro_make sugomg.c </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">This will create an exec file
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">./sugomg</span><br style="font-weight: bold;">
+
+
+
+<br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">&nbsp;to run a model with m0=100
+mhf=400 a0=0 tb=10 sgnmu=1, type
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">./sugomg 100 400 0 10 1 </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">The default values for standard model
+parameters are assumed.
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">to run a model with m0=100 mhf=400
+a0=0 tb=10 sgnmu=1, mt=179,
+mb(mb)=4.3, alsMz=.119</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">&nbsp;type ./sugomg 100 400 0 10 1 179
+4.3 .119 </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">The
+output will be on the screen </span><br style="font-weight: bold;">
+
+
+
+<br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">Warning: The first time new processes
+need
+to be linked, compilation can take
+up to a few minutes depending on how many processes need to be
+generated. </span><br style="font-weight: bold;">
+
+
+
+<br>
+
+
+
+<big style="font-weight: bold;"><big>B.</big></big> <span style="font-weight: bold;"><br>
+
+
+
+To compile the main program omg.c (unconstrained MSSM)
+just type </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">./micro_make omg.c
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">This will create an exec file omg </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">To run (with a specific set of
+parameters defined in a datafile with the
+format as in the directory data), </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">type ./omg datafile </span><br style="font-weight: bold;">
+
+
+
+<br style="font-weight: bold;">
+
+
+
+<big style="font-weight: bold;"><big>C</big></big><span style="font-weight: bold;">. <br>
+
+
+
+To compile the
+program s_cycle.c (mSUGRA with scan of parameters) just type
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">./micro_make s_cycle.c </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">This will create an exec file s_cycle </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">To run a
+test scan, </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">type ./s_cycle </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">To modify parameters of the SUGRA
+model </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">edit
+scycle.c </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">The output is in s_cycle.res</span><br>
+
+
+
+<br>
+
+
+
+&nbsp;<big><big><span style="font-weight: bold;">D</span></big></big>.<span style="font-weight: bold;"> <br>
+
+
+
+To compile the program cs_br.c
+(mSUGRA) just type </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">./micro_make cs_br.c </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">This will create an exec file
+cs_br. The input parameters are written in the file , modify if you
+wish and
+then type
+./cs_br
+The default values for standard model parameters are assumed.
+</span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">The output for a selection of decay
+widths and cross-sections
+will be on the screen. </span><br style="font-weight: bold;">
+
+
+
+<span style="font-weight: bold;">To add new processes, the file should
+be
+modified accordingly. </span><br style="font-weight: bold;">
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+<dl>
+
+
+
+  
+  
+  
+  <p><br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp;<br>
+
+
+
+  </p>
+
+
+
+  
+  
+  
+  <hr noshade="noshade" size="4" width="100%"><br>
+
+
+
+  <a name="detailscompil"></a><big style="color: rgb(153, 0, 0);"><big><span style="font-weight: bold;">Compilation Issues</span></big></big>
+</dl>
+
+
+
+<big style="font-style: italic; color: rgb(153, 0, 0);"><big><span style="font-weight: bold;"></span></big></big>
+<dl>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">The</font></font></b><span style="font-family: book antiqua;"><span style="font-weight: bold;"> </span></span><span style="font-weight: bold;">compilation is realized by means of
+standard "make" command. micro_make compiles
+the package with a main.c program and creates the "main" executable
+file. ??"make" is managed by the "makefile" stored in the root
+directory of the
+package. </span><br style="font-weight: bold;">
+
+
+
+  <br>
+
+
+
+</dl>
+
+
+
+<b><font face="Book Antiqua"><font color="#000000">If your are on one
+of the platforms listed below</font></font></b>
+<dl>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">Linux (PC)</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">IRIX/IRIX64
+(Silicon
+Graphics workstation)</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">OSF1 (DEC
+Alpha workstation)</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">SunOS</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">HP-UX</font></font></b></li>
+
+
+
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">the "makefile"
+should
+set automatically all the needed compiler options. If you are on some
+other
+platform and encounter difficulties <a href="mailto:micro.omegas@lapp.in2p3.fr">send
+us a message</a>.</font></font></b>
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">2. Fortran and
+C
+compiler names. These are defined in the first line of the&nbsp; <i>makefile:</i></font></font></b>
+  </p>
+
+
+
+  
+  
+  
+  <p><b><i><font face="Book Antiqua"><font color="#000000">FC = f77</font></font></i></b>
+  <br>
+
+
+
+  <b><i><font face="Book Antiqua"><font color="#000000">CC = cc</font></font></i></b>
+  </p>
+
+
+
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">This is a
+standard
+for all platforms. But there are exceptions. Some Linux versions have <i>g77</i>
+instead of <i>f77</i>. Sometimes <i>cc</i> is not installed, but one
+can
+use the&nbsp; <i>gcc</i> compiler.</font></font></b> </p>
+
+
+
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">3.&nbsp;
+C-compiler
+options.</font></font></b></p>
+
+
+
+</dl>
+
+
+
+<dl>
+
+
+
+  
+  
+  
+  <p><br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">These are
+specified&nbsp;
+via&nbsp; the parameter <i>"COPT"</i>.</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">We need two options</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">a) type "<i>char</i>"
+should mean "<i>signed char</i>"</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; For Linux
+and OSF1 it is a default.</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; For
+IRIX/IRIX64
+it is set by&nbsp;&nbsp;&nbsp; "<i>-signed</i>"</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp; In case of
+gcc compiler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "<i>-fsigned-cha</i>r"</font></font></b>
+  </p>
+
+
+
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">b) C-compiler
+should&nbsp;
+support features of the IEEE Standard for Binary Floating-Point
+Arithmetic,
+especially the&nbsp;&nbsp; treatment of denormalized numbers, NaNs, and
+infinities.</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">This option is a
+default for Linux and IRIX/IRIX64 but should be set for OSF1 by "-ieee".</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">This is not a hard
+requirement. But if you use the package for scanning a large number of
+MSSM parameters, you can meet a case when some constrains can not be
+evaluated,
+for example like in the case&nbsp; of a division by zero or evaluating
+the&nbsp; squared root from a negative number. If <i>IEEE</i> is not
+supported
+then the program will terminate&nbsp; with a diagnostic like "Float
+exception".</font></font></b> </p>
+
+
+
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">4. C-linker
+options.&nbsp;
+We specify them via&nbsp; parameter "<i>LDOPT</i>".</font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">Sometimes you
+need&nbsp;
+a special&nbsp; library to support the dynamic loader.</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">In case of Linux
+it is "<i>-ldl</i>" also the option "-rdynamic" is needed for
+loader.&nbsp;
+For OSF1/IRIX/IRIX64&nbsp; one can use default options.</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">Look at "<i>man
+dlope</i>n" to find these options.</font></font></b> <br>
+
+
+
+  <b>If&nbsp; you&nbsp; use the Fortran ISAJET package to solve the RGE
+equations&nbsp; "make" will link&nbsp; our package&nbsp; with ISAJET if
+SUGRA variable is defined in the makefile. SUGRA should describe</b> <br>
+
+
+
+  <b>the&nbsp; name&nbsp; of the library&nbsp; including&nbsp; the path
+(See commented line at the top of&nbsp; the makefile). <font face="Book Antiqua"><font color="#000000">In
+this case one has&nbsp; to attach&nbsp; special Fortran library. It
+should
+be added to "LDOPT" too. The name of this library depends on the
+platform:</font></font></b> </p>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">For Red
+Hat&nbsp; Linux
+it is&nbsp; "-<i>lg2c</i>", but for some other versions it can be&nbsp;
+"<i>-f2c"</i>.</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">For
+IRIX/IRIX64 it set
+by "<i>-lftn</i>".</font></font></b></li>
+
+
+
+  <li><b><font face="Book Antiqua"><font color="#000000">For OSF1 one
+can use
+"<i>-lfor"</i>.</font></font></b></li>
+
+
+
+&nbsp;&nbsp;&nbsp;<br>
+
+
+
+  <br>
+
+
+
+  
+  
+  
+  <p><b><font face="Book Antiqua"><font color="#000000">If you have a
+problem
+with this option, write a primitive Fortran program and compile it by</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">&nbsp;&nbsp; <i>f77
+-v &lt;you_program&gt;.f</i></font></font></b> <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">-v means verbose.
+F77 will show on the screen what it actually&nbsp; does.</font></font></b>
+  <br>
+
+
+
+  <b><font face="Book Antiqua"><font color="#000000">In particular, it
+pass to&nbsp; loader "<i>ld</i>" some libraries.</font></font></b> <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp; <br>
+
+
+
+&nbsp;</p>
+
+
+
+</dl>
+
+
+
+<script language="JavaScript">
+                <!--
+                        document.write("<IMG SRC=\"/cgi-bin/cgi-lapth/micromegas/webactivity/axs/ax.pl?trans.gif&ref=");
+                        document.write(document.referrer);
+                        document.write("\" HEIGHT=1 WIDTH=1>");
+                // -->
+                </script>
+<noscript><img SRC="https://lapth.cnrs.fr/micromegas/v1.3/ax.pl" height=1 width=1></noscript>
+
+
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <meta name="Author" content="Fawzi Boudjema">
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <meta name="GENERATOR" content="Mozilla/4.7 [en-gb] (Win98; U) [Netscape]">
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <title>documentation</title>
+</head>
+
+
+<body nosave="" style="color: rgb(0, 0, 0); background-color: rgb(192, 192, 192);" alink="#ff0000" link="#0000ee" vlink="#551a8b">
+
+
+
+
+
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1"><br>
+
+
+
+</font></font></font></b><span style="font-family: Arial,Helvetica;"><span style="font-weight: bold;"></span></span>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="background-color: rgb(0, 0, 0);" align="undefined" valign="undefined">
+
+
+
+  
+
+
+
+    
+
+
+
+      <b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">v 2.0.7: List of changes from release 2.0 .6 (August 2007)</font></font></font></b></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-weight: bold;"><span style="color: rgb(51, 51, 255);"><span style="color: rgb(0, 0, 0);">2.0.7</span><br>
+<span style="color: rgb(0, 0, 0);">-minor bugs corrected</span></span><span style="color: rgb(0, 0, 0);"></span></span><br>
+
+<span style="font-family: Arial,Helvetica;"><span style="font-weight: bold;"></span></span>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="background-color: rgb(0, 0, 0);" align="undefined" valign="undefined">
+
+
+
+  
+
+
+
+    
+
+
+
+      <b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">v 2.0.6: List of changes from release 2.0 .1 (July 2007)</font></font></font></b></td>
+
+
+    </tr>
+
+
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-weight: bold;"><span style="color: rgb(51, 51, 255);"><span style="color: rgb(0, 0, 0);">2.0.6</span><br>
+
+
+-</span>&nbsp;<span style="color: rgb(0, 0, 0);">bug in non-universal sugra in Isajet removed <br>
+
+
+-deltartho--&gt;deltarho<br>
+&nbsp;</span></span><span style="font-style: italic;">Thanks to Sezen Sekmen for detecting a bug&nbsp; in our interface with Isajet in the case of non-universal masses.</span>
+<table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" cols="1" width="100%">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1">v 2.0.1: List of changes from release 2.0&nbsp;</font></font></font></b><b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1"><span style="color: rgb(255, 255, 255);"></span></font></font></font></b><font face="Arial,Helvetica"><font color="#ff0000"><font size="+1"><span style="color: rgb(255, 255, 255);"><small><span style="font-style: italic;"></span></small></span></font></font></font></td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<b><font face="Arial,Helvetica"><font color="#000000"><font size="-1">2.0.1 <br>
+
+
+
+-Removes bugs in some Fortran interface routines<br>
+
+
+
+-Removes bugs in Cygwin version<br>
+
+
+
+-Adds a sample main program for the relic density calculation in the AMSB model (amsb.c)<br>
+
+
+
+-Adds an option to work with C++ main programs (relevant for CPVMSSM).<br>
+
+
+
+In CPVMSSM, the routine&nbsp; 'edm_'&nbsp; which calculates &nbsp;the
+electron dipole moment was written in C++. Within this model you can
+either work with C++<br>
+
+
+
+main programs (the only solution for old platforms like OSF1 and SunOS)
+or work with the C main program (but you will have to rename the main
+program&nbsp; *.cpp) or make some modifications that will work for
+C&nbsp;or Fortran. In this case (C and Fortran) proceeds as follow: <br>
+
+
+
+<br>
+
+
+
+</font></font></font></b>
+<div style="margin-left: 40px;"><b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">You need to pass to the linker additional libraries (and may be object files) needed by</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">the C++ code. For Linux or Darwin we have one C/C++ compiler, the needed library is </font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">-lstdc++&nbsp; and gcc/g77 compilers know where to find this library. You have to correct the</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">Makefile in the CPVMSSM directory adding -lstdc++ to the linker command for Fortran and</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">C versions as follows&nbsp; </font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">~~~~~~~~~~~~~~~~</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">ifeq (.c,$(suffix $(main)))</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(CC) $(CFLAGS) -o $(main:.c=) $(SSS) $(lDL) -lstdc++ -lm</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">else</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">ifeq (.F,$(suffix $(main)))</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(FC) $(FFLAGS) -o $(main:.F=)&nbsp; $(SSS)&nbsp; $(lDL) -lstdc++ -lm</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">~~~~~~~~~~~~~~~~</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">There is no guarantee that this will work for all Linux and Darwin versions, you might</font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">need to add the -L&lt;path&gt; instruction which specifies the location of the -lstdc++ </font></font></font></b><br style="font-style: italic;">
+
+
+
+<b style="font-style: italic;"><font face="Arial,Helvetica"><font color="#000000"><font size="-1">library. </font></font></font></b><br>
+
+
+
+</div>
+
+
+
+<br>
+
+
+<font face="Arial,Helvetica"><font color="#000000"><font size="-1">
+</font></font></font>
+</body>
+</html>
